@@ -15,6 +15,7 @@ jobs:
       - name: Run tests
         run: npm test
   deploy:
+    needs: test # To make sure it doesnt runs parallel and wait for test job execution to be completed
     runs-on: ubuntu-latest
     steps:
       - name: Get code
