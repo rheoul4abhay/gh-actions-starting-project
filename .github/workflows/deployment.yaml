@@ -1,5 +1,5 @@
 name: Deploy NodeJS app
-on: push
+on: [push, workflow_dispatch] # multiple-events
 jobs:
   test:
     runs-on: ubuntu-latest
